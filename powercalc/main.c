@@ -8,8 +8,8 @@ int main(int argc, char* argv[]) {
 		return -1;
 	}
 
-	int load = atoi(argv[1]);
-	int hours = atoi(argv[2]);
+	double load = atof(argv[1]);
+	double hours = atof(argv[2]);
 
 	if (load == 0 || hours == 0) {
 		printf("Invalid input.\n");
@@ -17,8 +17,8 @@ int main(int argc, char* argv[]) {
 		return -1;
 	}
 
-	float energy = ((float)load / 1000) * (float)hours;
-	printf("Energy consumed in %dh: %.2fkWh\n", hours, energy);
+	double energy = (load / 1000) * hours;
+	printf("Energy consumed in %.1fh: %.2fkWh\n", hours, energy);
 
 	return 0;
 }
